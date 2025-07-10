@@ -1,7 +1,15 @@
 name: Create Release Mediatek Filogic
-#on: [push]
+
 on:
- workflow_dispatch:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'OpenWRT version tag (example: 24.10.2)'
+        required: true
+        default: '24.10.2'
  
 jobs:
   build:
