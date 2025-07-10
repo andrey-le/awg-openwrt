@@ -1,10 +1,8 @@
 name: Create Release Mediatek Filogic
 #on: [push]
 on:
-  push:
-    tags:
-      - "v*.*.*"
-
+ workflow_dispatch:
+ 
 jobs:
   build:
     name: "v${{ matrix.tag }} - ${{ matrix.build_env.pkgarch}} :: ${{ matrix.build_env.target}}/${{ matrix.build_env.subtarget}} build"
