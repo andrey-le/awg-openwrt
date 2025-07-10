@@ -12,7 +12,7 @@ jobs:
     #runs-on: ubuntu-latest
     strategy:
       matrix:
-        tag: ['24.10.1']
+        tag: ['24.10.2']
         build_env:
           - pkgarch: aarch64_cortex-a53
             target: mediatek
